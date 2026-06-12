@@ -561,20 +561,23 @@ button {
 .logos-grid:hover { opacity: 0.9; }
 
 @media (min-width: 768px) {
-  .logos-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3rem; }
+  .logos-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem; }
 }
 
-.logo-item svg {
-  height: 1.5rem;
+.logo-item svg, .logo-item img {
+  height: auto;
+  max-height: 2.5rem;
+  max-width: 140px;
   color: var(--color-text-muted);
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  object-fit: contain;
 }
 
 @media (min-width: 768px) {
-  .logo-item svg { height: 2rem; }
+  .logo-item svg, .logo-item img { max-height: 3.5rem; }
 }
 
-.logo-item:hover svg {
+.logo-item:hover svg, .logo-item:hover img {
   transform: scale(1.1);
   color: var(--color-primary);
 }
