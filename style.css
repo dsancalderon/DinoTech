@@ -29,13 +29,14 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: var(--font-sans);
   background-color: var(--color-bg-base);
   color: var(--color-text-main);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
+  width: 100%;
 }
 
 a {
